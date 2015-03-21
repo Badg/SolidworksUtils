@@ -1,0 +1,53 @@
+--- !examplePart
+# Subset of  YAML
+#  http://en.wikipedia.org/wiki/YAML
+
+pre-include:
+    - Material 	: <not specified>
+	
+global-def:
+    - Units : [mm, deg]
+    - Front : [FEATURE: Front | RefPlane]
+    - Top : [FEATURE: Top | RefPlane]
+    - Right : [FEATURE: Right | RefPlane]
+    - Origin : [FEATURE: Origin | OriginProfileFeature]
+
+local-def:
+    extrusion: &Boss-Extrude1
+        # That reference is actually useful, because it allows you to specify when to implement the include.  Readback -> put them in a folder with a specific name?
+        # Should it be Boss-Extrude1: &Boss-Extrude1 and then type: extrusion?  or feature: & and then type: and name: ?
+          # Names (or would ID be better?) should be unique (could create separate solidworksname for back-compatibility)
+          # Vertical, horizontal, etc would probably be better defined in terms of reference geometry?
+        name: Boss-Extrude1
+        source: *Sketch1
+                    # attributes:
+    sketch: &Sketch1
+           # What about putting the sketch before the extrusion?  That's the order they're usually created in!
+           #  How to deal with sketch1-> sketch2 -> feature1 -> feature2 and other atypical rollback orders?
+        name:   Sketch1 
+        type:   ProfileFeature
+        entities: # The second number in the ID appears to be the actual unique ID.  It increments based on actual creation of entities, regardless of deletion, as best as I can tell.  Start point should always come first, but don't declare it as such -- generalized data (point: 2-3, point: 4-5) would be better.
+            - line [1, 1]: [2-3, 4-5]
+            - line [2, 2]: [2-3, 3-4]
+            - line [3, 3]: [EndpointX, EndpointY]
+            - line [4, 4]: [EndpointX, EndpointY]
+            - line [5, 5]: [EndpointX, EndpointY]
+            - line [6, 6]: [EndpointX, EndpointY]
+        relations:
+            - coincident: 
+                EntityX
+                EntityY
+            - coincident: 
+                EntityX
+                EntityY
+            - coincident: 
+                EntityX
+                EntityY
+            - equal:      [EntityX, EntityY]
+            - vertical:   [EntityX, EntityY, etc]
+            - horizontal: [EntityX, EntityY, etc]
+            - distance:   [EntityX, EntityY]
+            
+post-include:
+# Since includes are being implemented as references, is a post- and pre-include really necessary?
+...

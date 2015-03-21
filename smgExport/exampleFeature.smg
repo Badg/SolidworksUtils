@@ -1,0 +1,323 @@
+--- !exampleFeature
+# Source-Mutable Geometry (.smg) files are formatted as a subset of YAML.
+init: 
+    63499277: &63499277
+        name: Front
+        type2: 10
+        type: baseplane
+        smgID: 63499277
+    48008162: &48008162
+        name: Top
+        type2: 10
+        type: baseplane
+        smgID: 48008162
+    52156676: &52156676
+        name: Right
+        type2: 10
+        type: baseplane
+        smgID: 52156676
+    26060622: &26060622
+        name: Origin
+        type: origin
+        smgID: 26060622
+main: 
+  - 33618256: &33618256
+        smgID: 33618256
+        type: sketch
+        used_in_feature: true
+        name: Sketch1
+        parent: Front
+        entities: 
+            86575786: &86575786
+                id: 0-1
+                center: point2@Sketch1
+                parent: Sketch1
+                name: arc1@Sketch1
+                type: circle
+                smgID: 86575786
+            78430126: &78430126
+                id: 1-2
+                center: point5@Sketch1
+                parent: Sketch1
+                name: arc2@Sketch1
+                type: circle
+                smgID: 78430126
+            05061318: &05061318
+                type: line
+                id: 0-1
+                start: point2@Sketch1
+                end: point5@Sketch1
+                parent: Sketch1
+                name: line1@Sketch1
+                smgID: 05061318
+            85460099: &85460099
+                type: line
+                id: 2-2
+                start: point8@Sketch1
+                end: point10@Sketch1
+                parent: Sketch1
+                name: line2@Sketch1
+                smgID: 85460099
+            32761681: &32761681
+                type: line
+                id: 3-3
+                start: point8@Sketch1
+                end: point9@Sketch1
+                parent: Sketch1
+                name: line3@Sketch1
+                smgID: 32761681
+            47238159: &47238159
+                type: line
+                id: 4-4
+                start: point9@Sketch1
+                end: point7@Sketch1
+                parent: Sketch1
+                name: line4@Sketch1
+                smgID: 47238159
+            69040050: &69040050
+                type: line
+                id: 5-5
+                start: point10@Sketch1
+                end: point7@Sketch1
+                parent: Sketch1
+                name: line5@Sketch1
+                smgID: 69040050
+            04815407: &04815407
+                type: line
+                id: 6-6
+                start: point8@Sketch1
+                end: point7@Sketch1
+                parent: Sketch1
+                name: line6@Sketch1
+                smgID: 04815407
+            53321243: &53321243
+                type: line
+                id: 7-7
+                start: point9@Sketch1
+                end: point10@Sketch1
+                parent: Sketch1
+                name: line7@Sketch1
+                smgID: 53321243
+            42183010: &42183010
+                type: point
+                id: 0-2
+                parent: Sketch1
+                name: point2@Sketch1
+                coordinates: [ 0,  0,  0]
+                smgID: 42183010
+            26834890: &26834890
+                type: point
+                id: 3-5
+                parent: Sketch1
+                name: point5@Sketch1
+                coordinates: [ .0508,  0,  0]
+                smgID: 26834890
+            56042703: &56042703
+                type: point
+                id: 5-6
+                parent: Sketch1
+                name: point6@Sketch1
+                coordinates: [ .0254,  0,  0]
+                smgID: 56042703
+            58303908: &58303908
+                type: point
+                id: 6-7
+                parent: Sketch1
+                name: point7@Sketch1
+                coordinates: [-.0381,  .0635,  0]
+                smgID: 58303908
+            23741364: &23741364
+                type: point
+                id: 7-8
+                parent: Sketch1
+                name: point8@Sketch1
+                coordinates: [ .0889, -.0635,  0]
+                smgID: 23741364
+            25140785: &25140785
+                type: point
+                id: 8-9
+                parent: Sketch1
+                name: point9@Sketch1
+                coordinates: [ .0889,  .0635,  0]
+                smgID: 25140785
+            74682147: &74682147
+                type: point
+                id: 9-10
+                parent: Sketch1
+                name: point10@Sketch1
+                coordinates: [-.0381, -.0635,  0]
+                smgID: 74682147
+        relations: 
+            74214192: &74214192
+                name: unnamed relation
+                type: coincident
+                destination: point2@Sketch1
+                source: point1@Origin
+                smgID: 74214192
+            53024671: &53024671
+                name: unnamed relation
+                type: coincident
+                destination: line6@Sketch1
+                source: point6@Sketch1
+                smgID: 53024671
+            88748386: &88748386
+                name: unnamed relation
+                type: coincident
+                destination: line7@Sketch1
+                source: point6@Sketch1
+                smgID: 88748386
+            81986789: &81986789
+                name: unnamed relation
+                type: at midpoint
+                destination: line1@Sketch1
+                source: point6@Sketch1
+                smgID: 81986789
+            20417941: &20417941
+                name: unnamed relation
+                type: equal length
+                destination: line5@Sketch1
+                source: line2@Sketch1
+                smgID: 20417941
+            62560396: &62560396
+                name: unnamed relation
+                type: horizontal
+                destination: line1@Sketch1
+                source: global
+                smgID: 62560396
+            88200292: &88200292
+                name: unnamed relation
+                type: vertical
+                destination: line3@Sketch1
+                source: global
+                smgID: 88200292
+            21953822: &21953822
+                name: unnamed relation
+                type: horizontal
+                destination: line2@Sketch1
+                source: global
+                smgID: 21953822
+            48048578: &48048578
+                name: unnamed relation
+                type: vertical
+                destination: line5@Sketch1
+                source: global
+                smgID: 48048578
+            09573271: &09573271
+                name: unnamed relation
+                type: horizontal
+                destination: line4@Sketch1
+                source: global
+                smgID: 09573271
+            89947312: &89947312
+                name: unnamed relation
+                type: distance
+                destination2: point5@Sketch1
+                destination1: point2@Sketch1
+                source: global
+                smgID: 89947312
+            60855831: &60855831
+                name: unnamed relation
+                type: distance
+                destination2: point7@Sketch1
+                destination1: point10@Sketch1
+                source: global
+                smgID: 60855831
+            01413353: &01413353
+                name: unnamed relation
+                type: diameter
+                destination: arc1@Sketch1
+                source: global
+                smgID: 01413353
+            51766543: &51766543
+                name: unnamed relation
+                type: diameter
+                destination: arc2@Sketch1
+                source: global
+                smgID: 51766543
+        dimensions: 
+            09004701: &09004701
+                name: D1
+                parent: Sketch1
+                value: 2.5
+                type: diameter
+                attachments: [arc1@Sketch1]
+                state: driving
+                smgID: 09004701
+            09272037: &09272037
+                name: D2
+                parent: Sketch1
+                value: 2
+                type: linear
+                attachments: [point2@Sketch1, point5@Sketch1]
+                state: driving
+                smgID: 09272037
+            71899596: &71899596
+                name: D3
+                parent: Sketch1
+                value: 1
+                type: diameter
+                attachments: [arc2@Sketch1]
+                state: driving
+                smgID: 71899596
+            25603225: &25603225
+                name: D4
+                parent: Sketch1
+                value: 5
+                type: linear
+                attachments: [point10@Sketch1, point7@Sketch1]
+                state: driving
+                smgID: 25603225
+  - 27175321: 
+        smgID: 27175321
+        type: Extrusion
+        name: Boss-Extrude1
+        dimensions: 
+            69726610: &69726610
+                name: D1
+                parent: Boss-Extrude1
+                value: 1
+                type: linear
+                state: driving
+                smgID: 69726610
+        faces: 
+            01261588: &01261588
+                name: anonymous face
+                type: face
+                normal vector: [ 0,  0,  0]
+                smgID: 01261588
+            68465124: &68465124
+                name: anonymous face
+                type: face
+                normal vector: [ 0,  0,  0]
+                smgID: 68465124
+            73304103: &73304103
+                name: anonymous face
+                type: face
+                normal vector: [-1.09273919746571E-16,  1, -0]
+                smgID: 73304103
+            63813412: &63813412
+                name: anonymous face
+                type: face
+                normal vector: [ 1,  1.09273919746571E-16, -0]
+                smgID: 63813412
+            04081748: &04081748
+                name: anonymous face
+                type: face
+                normal vector: [ 1.09273919746571E-16, -1, -0]
+                smgID: 04081748
+            37262943: &37262943
+                name: anonymous face
+                type: face
+                normal vector: [-1, -0, -0]
+                smgID: 37262943
+            77635742: &77635742
+                name: anonymous face
+                type: face
+                normal vector: [-0,  0, -1]
+                smgID: 77635742
+            71143202: &71143202
+                name: anonymous face
+                type: face
+                normal vector: [ 0, -0,  1]
+                smgID: 71143202
+        sketch: *33618256

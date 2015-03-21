@@ -1,0 +1,39 @@
+Public Enum swSketchRelationEntityTypes_e
+    swSketchRelationEntityType_Unknown = 0
+    swSketchRelationEntityType_SubSketch = 1
+    swSketchRelationEntityType_Point = 2
+    swSketchRelationEntityType_Line = 3
+    swSketchRelationEntityType_Arc = 4
+    swSketchRelationEntityType_Ellipse = 5
+    swSketchRelationEntityType_Parabola = 6
+    swSketchRelationEntityType_Spline = 7
+    swSketchRelationEntityType_Hatch = 8
+    swSketchRelationEntityType_Text = 9
+    swSketchRelationEntityType_Plane = 10
+    swSketchRelationEntityType_Cylinder = 11
+    swSketchRelationEntityType_Sphere = 12
+    swSketchRelationEntityType_Surface = 13
+    swSketchRelationEntityType_Dimension = 14
+End Enum
+
+swSketchSegments_e Enumeration 
+	swSketchLINE		0
+	swSketchARC			1
+	swSketchELLIPSE		2
+	swSketchSPLINE		3
+	swSketchTEXT		4
+	swSketchPARABOLA	5
+	
+swSketchEntityType_e Enumeration 
+	swSketchEntityPoint		1
+	swSketchEntityLine		2
+	swSketchEntityArc		3
+	swSketchEntityEllipse	4
+	swSketchEntityParabola	5
+	swSketchEntitySpline	6
+	
+swDimensionParamType_e Enumeration
+	swDimensionParamTypeUnknown	 
+	swDimensionParamTypeDoubleLinear	 
+	swDimensionParamTypeDoubleAngular	 
+	swDimensionParamTypeInteger

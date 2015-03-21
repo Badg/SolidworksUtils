@@ -52,3 +52,8 @@ docs/_build/
 
 # PyBuilder
 target/
+smgExport/exampleFeature.SLDPRT
+smgExport/examplePart.smg
+smgExport/test_assembly.SLDASM
+smgExport/examplePart.SLDPRT
+smgExport/exampleSketch.SLDPRT

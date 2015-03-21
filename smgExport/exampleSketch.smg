@@ -1,0 +1,408 @@
+--- !exampleSketch
+# Source-Mutable Geometry (.smg) files are formatted as a subset of YAML.
+init: 
+    63499277: &63499277
+        type: baseplane
+        def_sw: 
+            name: Front
+            type2: 10
+        id: 63499277
+    48008162: &48008162
+        type: baseplane
+        def_sw: 
+            name: Top
+            type2: 10
+        id: 48008162
+    52156676: &52156676
+        type: baseplane
+        def_sw: 
+            name: Right
+            type2: 10
+        id: 52156676
+    26060622: &26060622
+        type: origin
+        def_sw: 
+            name: Origin
+        id: 26060622
+main: 
+  - 27175321: &27175321
+        id: 27175321
+        type: sketch
+        parent: *63499277
+        entities: 
+            69726610: &69726610
+                center: *42183010
+                parent: Sketch1
+                is_construction: False
+                type: circle
+                def_sw: 
+                    id: 0-1
+                    name: arc1@Sketch1
+                id: 69726610
+            01261588: &01261588
+                center: *26834890
+                parent: Sketch1
+                is_construction: False
+                type: circle
+                def_sw: 
+                    id: 1-2
+                    name: arc2@Sketch1
+                id: 01261588
+            63813412: &63813412
+                type: line
+                parent: Sketch1
+                is_infinite: False
+                is_construction: True
+                start: *42183010
+                end: *26834890
+                constraints: 
+                    68465124: &68465124
+                        type: at midpoint
+                        destination: *63813412
+                        source: *56042703
+                        def_sw: 
+                            name: anonymous relation
+                        id: 68465124
+                    73304103: &73304103
+                        type: horizontal
+                        destination: *63813412
+                        source: global
+                        def_sw: 
+                            name: anonymous relation
+                        id: 73304103
+                def_sw: 
+                    id: 0-1
+                    name: line1@Sketch1
+                id: 63813412
+            77635742: &77635742
+                type: line
+                parent: Sketch1
+                is_infinite: False
+                is_construction: False
+                start: *23741364
+                end: *74682147
+                constraints: 
+                    04081748: &04081748
+                        type: equal length
+                        destination: *32761681
+                        source: *77635742
+                        def_sw: 
+                            name: anonymous relation
+                        id: 04081748
+                    37262943: &37262943
+                        type: horizontal
+                        destination: *77635742
+                        source: global
+                        def_sw: 
+                            name: anonymous relation
+                        id: 37262943
+                def_sw: 
+                    id: 2-2
+                    name: line2@Sketch1
+                id: 77635742
+            33618256: &33618256
+                type: line
+                parent: Sketch1
+                is_infinite: False
+                is_construction: False
+                start: *23741364
+                end: *25140785
+                constraints: 
+                    71143202: &71143202
+                        type: vertical
+                        destination: *33618256
+                        source: global
+                        def_sw: 
+                            name: anonymous relation
+                        id: 71143202
+                def_sw: 
+                    id: 3-3
+                    name: line3@Sketch1
+                id: 33618256
+            78430126: &78430126
+                type: line
+                parent: Sketch1
+                is_infinite: False
+                is_construction: False
+                start: *25140785
+                end: *58303908
+                constraints: 
+                    86575786: &86575786
+                        type: horizontal
+                        destination: *78430126
+                        source: global
+                        def_sw: 
+                            name: anonymous relation
+                        id: 86575786
+                def_sw: 
+                    id: 4-4
+                    name: line4@Sketch1
+                id: 78430126
+            32761681: &32761681
+                type: line
+                parent: Sketch1
+                is_infinite: False
+                is_construction: False
+                start: *74682147
+                end: *58303908
+                constraints: 
+                    05061318: &05061318
+                        type: equal length
+                        destination: *32761681
+                        source: *77635742
+                        def_sw: 
+                            name: anonymous relation
+                        id: 05061318
+                    85460099: &85460099
+                        type: vertical
+                        destination: *32761681
+                        source: global
+                        def_sw: 
+                            name: anonymous relation
+                        id: 85460099
+                def_sw: 
+                    id: 5-5
+                    name: line5@Sketch1
+                id: 32761681
+            69040050: &69040050
+                type: line
+                parent: Sketch1
+                is_infinite: False
+                is_construction: True
+                start: *23741364
+                end: *58303908
+                constraints: 
+                    47238159: &47238159
+                        type: coincident
+                        destination: *69040050
+                        source: *56042703
+                        def_sw: 
+                            name: anonymous relation
+                        id: 47238159
+                def_sw: 
+                    id: 6-6
+                    name: line6@Sketch1
+                id: 69040050
+            53321243: &53321243
+                type: line
+                parent: Sketch1
+                is_infinite: False
+                is_construction: True
+                start: *25140785
+                end: *74682147
+                constraints: 
+                    04815407: &04815407
+                        type: coincident
+                        destination: *53321243
+                        source: *56042703
+                        def_sw: 
+                            name: anonymous relation
+                        id: 04815407
+                def_sw: 
+                    id: 7-7
+                    name: line7@Sketch1
+                id: 53321243
+            42183010: &42183010
+                type: point
+                parent: Sketch1
+                def_sw: 
+                    id: 0-2
+                    type: 0
+                    name: point2@Sketch1
+                    coordinates: [ 0,  0,  0]
+                id: 42183010
+            26834890: &26834890
+                type: point
+                parent: Sketch1
+                def_sw: 
+                    id: 3-5
+                    type: 0
+                    name: point5@Sketch1
+                    coordinates: [ .0508,  0,  0]
+                id: 26834890
+            56042703: &56042703
+                type: point
+                parent: Sketch1
+                def_sw: 
+                    id: 5-6
+                    type: 1
+                    name: point6@Sketch1
+                    coordinates: [ .0254,  0,  0]
+                id: 56042703
+            58303908: &58303908
+                type: point
+                parent: Sketch1
+                def_sw: 
+                    id: 6-7
+                    type: 0
+                    name: point7@Sketch1
+                    coordinates: [-.0381,  .0635,  0]
+                id: 58303908
+            23741364: &23741364
+                type: point
+                parent: Sketch1
+                def_sw: 
+                    id: 7-8
+                    type: 0
+                    name: point8@Sketch1
+                    coordinates: [ .0889, -.0635,  0]
+                id: 23741364
+            25140785: &25140785
+                type: point
+                parent: Sketch1
+                def_sw: 
+                    id: 8-9
+                    type: 0
+                    name: point9@Sketch1
+                    coordinates: [ .0889,  .0635,  0]
+                id: 25140785
+            74682147: &74682147
+                type: point
+                parent: Sketch1
+                def_sw: 
+                    id: 9-10
+                    type: 0
+                    name: point10@Sketch1
+                    coordinates: [-.0381, -.0635,  0]
+                id: 74682147
+        relations: 
+            74214192: &74214192
+                type: coincident
+                destination: *42183010
+                source: *point1@Origin
+                def_sw: 
+                    name: anonymous relation
+                id: 74214192
+            53024671: &53024671
+                type: coincident
+                destination: *69040050
+                source: *56042703
+                def_sw: 
+                    name: anonymous relation
+                id: 53024671
+            88748386: &88748386
+                type: coincident
+                destination: *53321243
+                source: *56042703
+                def_sw: 
+                    name: anonymous relation
+                id: 88748386
+            81986789: &81986789
+                type: at midpoint
+                destination: *63813412
+                source: *56042703
+                def_sw: 
+                    name: anonymous relation
+                id: 81986789
+            20417941: &20417941
+                type: equal length
+                destination: *32761681
+                source: *77635742
+                def_sw: 
+                    name: anonymous relation
+                id: 20417941
+            62560396: &62560396
+                type: horizontal
+                destination: *63813412
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 62560396
+            88200292: &88200292
+                type: vertical
+                destination: *33618256
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 88200292
+            21953822: &21953822
+                type: horizontal
+                destination: *77635742
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 21953822
+            48048578: &48048578
+                type: vertical
+                destination: *32761681
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 48048578
+            09573271: &09573271
+                type: horizontal
+                destination: *78430126
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 09573271
+            89947312: &89947312
+                type: distance
+                destination2: *26834890
+                destination1: *42183010
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 89947312
+            60855831: &60855831
+                type: distance
+                destination2: *58303908
+                destination1: *74682147
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 60855831
+            01413353: &01413353
+                type: diameter
+                destination: *69726610
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 01413353
+            51766543: &51766543
+                type: diameter
+                destination: *01261588
+                source: global
+                def_sw: 
+                    name: anonymous relation
+                id: 51766543
+        dimensions: 
+            09004701: &09004701
+                parent: Sketch1
+                value: 2.5
+                type: diameter
+                attachments: [*arc1@Sketch1]
+                state: driving
+                def_sw: 
+                    name: D1
+                id: 09004701
+            09272037: &09272037
+                parent: Sketch1
+                value: 2
+                type: linear
+                attachments: [*point2@Sketch1, *point5@Sketch1]
+                state: driving
+                def_sw: 
+                    name: D2
+                id: 09272037
+            71899596: &71899596
+                parent: Sketch1
+                value: 1
+                type: diameter
+                attachments: [*arc2@Sketch1]
+                state: driving
+                def_sw: 
+                    name: D3
+                id: 71899596
+            25603225: &25603225
+                parent: Sketch1
+                value: 5
+                type: linear
+                attachments: [*point10@Sketch1, *point7@Sketch1]
+                state: driving
+                def_sw: 
+                    name: D4
+                id: 25603225
+        def_sw: 
+            name: Sketch1
+            used_in_feature: false

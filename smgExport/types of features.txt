@@ -1,0 +1,265 @@
+Assembly Features
+=====================
+
+	swTnExplodeLineProfileFeature "ExplodeLineProfileFeature"
+	swTnInContextFeatHolder "InContextFeatHolder"
+	swTnMateCoincident "MateCoincident"
+	swTnMateConcentric "MateConcentric"
+	swTnMateDistanceDim "MateDistanceDim"
+	swTnMateGroup "MateGroup"
+	swTnMateInPlace "MateInPlace"
+	swTnMateParallel "MateParallel"
+	swTnMatePerpendicular "MatePerpendicular"
+	swTnMatePlanarAngleDim "MatePlanarAngleDim"
+	swTnMateSymmetric "MateSymmetric"
+	swTnMateTangent "MateTangent"
+	swTnMateWidth "MateWidth"
+	swTnReference "Reference"
+	swTnSmartComponentFeature "SmartComponentFeature"
+	
+Body Features
+===============
+
+	swTnBaseBody "BaseBody"
+	swTnBlend "Blend"
+	swTnBlendCut "BlendCut"
+	swTnBoss "Boss"
+	swTnBossThin "BossThin"
+	swTnCavity "Cavity"
+	swTnChamfer "Chamfer"
+	swTnCirPattern "CirPattern"
+	swTnCombineBodies "CombineBodies"
+	swTnCosmeticThread "CosmeticThread"
+	swTnCurvePattern "CurvePattern"
+	swTnCut "Cut"
+	swTnCutThin "CutThin"
+	swTnDeform "Deform"
+	swTnDeleteBody "DeleteBody"
+	swTnDelFace "DelFace"
+	swTnDerivedCirPattern "DerivedCirPattern"
+	swTnDerivedLPattern "DerivedLPattern"
+	swTnDome "Dome"
+	swTnDraft "Draft"
+	swTnEmboss "Emboss"
+	swTnExtrusion "Extrusion"
+	swTnFillet "Fillet"
+	swTnHelix "Helix"
+	swTnHoleWzd "HoleWzd"
+	swTnImported "Imported"
+	swTnICE "ICE"   //Instant3D
+	swTnLocalCirPattern "LocalCirPattern"
+	swTnLocalLPattern "LocalLPattern"
+	swTnLPattern "LPattern"
+	swTnMirrorPattern "MirrorPattern"
+	swTnMirrorSolid "MirrorSolid"
+	swTnMoveCopyBody "MoveCopyBody"
+	swTnReplaceFace "ReplaceFace"
+	swTnRevCut "RevCut"
+	swTnRevolution "Revolution"
+	swTnRevolutionThin "RevolutionThin"
+	swTnShape "Shape"
+	swTnShell "Shell"
+	swTnSplit "Split"
+	swTnStock "Stock"
+	swTnSweep "Sweep"
+	swTnSweepCut "SweepCut"
+	swTnTablePattern "TablePattern"
+	swTnThicken "Thicken"
+	swTnThickenCut "ThickenCut"
+	swTnVarFillet "VarFillet"
+	swTnVolSweep "VolSweep"
+	swTnVolSweepCut "VolSweepCut"
+	swTnMirrorStock "MirrorStock"
+	
+Drawing Features
+==================
+
+	swTnAbsoluteView "AbsoluteView"
+	swTnAlignGroup "AlignGroup"
+	swTnAuxiliaryView "AuxiliaryView"
+	swTnBomTableAnchor "BomTemplate"
+	swTnBomTableFeature "BomFeat"
+	swTnBomTemplate "BomTemplate"
+	swTnBreakLine "BreakLine"
+	swTnCenterMark "CenterMark"
+	swTnDetailCircle "DetailCircle"
+	swTnDetailView "DetailView"
+	swTnDrBreakoutSectionLine "DrBreakoutSectionLine"
+	swTnDrSectionLine "DrSectionLine"
+	swTnDrSheet "DrSheet"
+	swTnDrTemplate "DrTemplate"
+	swTnDrViewDetached "DrViewDetached"
+	swTnGeneralTableAnchor "GeneralTableAnchor"
+	swTnHoleTableAnchor "HoleTableAnchor"
+	swTnHoleTableFeat "HoleTableFeat"
+	swTnHoleTableFeature "HoleTableFeat"
+	swTnLiveSection "LiveSection"
+	swTnRelativeView "RelativeView"
+	swTnRevisionTableAnchor "RevisionTableAnchor"
+	swTnRevisionTableFeature "RevisionTableFeat"
+	swTnSection "Section"
+	swTnSectionAssemView "SectionAssemView"
+	swTnSectionPartView "SectionPartView"
+	swTnSectionView "SectionView"
+	swTnUnfoldedView "UnfoldedView"
+	
+Folder Features
+===============
+
+	swTnBlocksFolder "BlockFolder"
+	swTnCommentsFolder "CommentsFolder"
+	swTnCutListFolder "CutListFolder"
+	swTnDocsFolder "DocsFolder"
+	swTnFeatSolidBodyFolder "FeatSolidBodyFolder"
+	swTnFeatSurfaceBodyFolder "FeatSurfaceBodyFolder"
+	swTnFeatureFolder "FtrFolder"
+	swTnFtrFolder "FtrFolder"
+	swTnGridDetailFolder "GridDetailFolder"
+	swTnInsertedFeatureFolder "InsertedFeatureFolder"
+	swTnLiveSectionFolder "LiveSectionFolder"
+	swTnMateReferenceGroupFolder "MateReferenceGroupFolder"
+	swTnMaterialFolder "MaterialFolder"
+	swTnPosGroupFolder "PosGroupFolder"
+	swTnProfileFtrFolder "ProfileFtrFolder"
+	swTnRefAxisFtrFolder "RefAxisFtrFolder"
+	swTnRefPlaneFtrFolder "RefPlaneFtrFolder"
+	swTnSolidBodyFolder "SolidBodyFolder"
+	swTnSmartComponentFolder "SmartComponentFolder"
+	swTnSmartComponentRefFolder "SmartComponentRefFolder"
+	swTnSubAtomFolder "SubAtomFolder"
+	swTnSubWeldFolder "SubWeldFolder"
+	swTnSurfaceBodyFolder "SurfaceBodyFolder"
+	swTnTableFolder "TableFolder"
+	
+Miscellaneous Features
+======================
+
+	swTnAttribute "Attribute"
+	swTnBlockDef "BlockDef"
+	swTnComments "Comments"
+	swTnConfigBuilderFeature "ConfigBuilderFeature"
+	swTnConfiguration "Configuration"
+	swTnCurveInFile "CurveInFile"
+	swTnDesignTableFeature "DesignTableFeature"
+	swTnDetailCabinet "DetailCabinet"
+	swTnEmbedLinkDoc "EmbedLinkDoc"
+	swTnGridFeature "GridFeature"
+	swTnJournal "Journal"
+	swTnLibraryFeature "LibraryFeature"
+	swTnPartConfiguration "PartConfiguration"
+	swTnReferenceBrowser "ReferenceBrowser"
+	swTnReferenceEmbedded "ReferenceEmbedded"
+	swTnReferenceInternal "ReferenceInternal"
+	swTnScale "Scale"
+	swTnViewerBodyFeature "ViewerBodyFeature"
+	swTnXMLRulesFeature "XMLRulesFeature"
+	
+Mold Features
+=============
+
+	swTnMoldCoreCavitySolids "MoldCoreCavitySolids"
+	swTnMoldPartingGeom "MoldPartingGeom"
+	swTnMoldPartingLine "MoldPartingLine"
+	swTnMoldShutOffSrf "MoldShutOffSrf"
+	
+Motion and Simulation Features
+==============================
+
+	swTnAEM3DContact "AEM3DContact"
+	swTnAEMGravity "AEMGravity"
+	swTnAEMLinearDamper "AEMLinearDamper"
+	swTnAEMLinearForce "AEMLinearForce"
+	swTnAEMLinearMotor "AEMLinearMotor"
+	swTnAEMLinearSpring "AEMLinearSpring"
+	swTnAEMRotationalMotor "AEMRotationalMotor"
+	swTnAEMSimFeature "AEMSimFeature"
+	swTnAEMTorque "AEMTorque"
+	swTnAEMTorsionalDamper "AEMTorsionalDamper"
+	swTnAEMTorsionalSpring "AEMTorsionalSpring"
+
+Reference Geometry Features
+===========================
+
+	swTnCoordinateSystem "CoordSys"
+	swTnCoordSys "CoordSys"
+	swTnRefAxis "RefAxis"
+	swTnReferenceCurve "ReferenceCurve"
+	swTnRefPlane "RefPlane"
+
+Scene, Lights, and Cameras
+==========================
+
+	swTnAmbientLight "AmbientLight"
+	swTnCameraFeature "CameraFeature"
+	swTnDirectionLight "DirectionLight"
+	swTnPointLight "PointLight"
+	swTnSpotLight "SpotLight"
+
+Sheet Metal Features
+====================
+
+	swTnBaseFlange "SMBaseFlange"
+	swTnBending "Bending"
+	swTnBreakCorner "BreakCorner"
+	swTnCornerTrim "CornerTrim"
+	swTnCrossBreak "CrossBreak"
+	swTnEdgeFlange "EdgeFlange"
+	swTnFlatPattern "FlatPattern"
+	swTnFlattenBends "FlattenBends"
+	swTnFold "Fold"
+	swTnFormToolInstance "FormToolInstance"
+	swTnHem "Hem"
+	swTnLoftedBend "LoftedBend"
+	swTnOneBend "OneBend"
+	swTnProcessBends "ProcessBends"
+	swTnSheetMetal "SheetMetal"
+	swTnSketchBend "SketchBend"
+	swTnSM3dBend "SM3dBend"
+	swTnSMBaseFlange "SMBaseFlange"
+	swTnSMMiteredFlange "SMMiteredFlange"
+	swTnToroidalBend "ToroidalBend"
+	swTnUiBend "UiBend"
+	swTnUnFold"UnFold"
+	
+Sketch Features
+================
+
+	swTn3DProfileFeature "3DProfileFeature"
+	swTn3DSplineCurve "3DSplineCurve"
+	swTnCompositeCurve "CompositeCurve"
+	swTnLayoutProfileFeature "LayoutProfileFeature"
+	swTnPLine "PLine"
+	swTnProfileFeature "ProfileFeature"
+	swTnRefCurve "RefCurve"
+	swTnRefPoint "RefPoint"
+	swTnSketchBlockDefinition "SketchBlockDef"
+	swTnSketchHole "SketchHole"
+	swTnSketchPattern "SketchPattern" 
+	swTnSketchPicture "SketchBitmap"
+	
+Surface Features
+================
+
+	swTnBlendRefSurface "BlendRefSurface"
+	swTnFillRefSurface "FillRefSurface"
+	swTnMidRefSurface "MidRefSurface"
+	swTnOffsetRefSurface "OffsetRefSurface"
+	swTnRadiateRefSurface "RadiateRefSurface"
+	swTnRefSurface "RefSurface"
+	swTnRevolvRefSurf "RevolvRefSurf"
+	swTnRuledSrfFromEdge "RuledSrfFromEdge"
+	swTnSewRefSurface "SewRefSurface"
+	swTnSurfCut "SurfCut"
+	swTnSweepRefSurface "SweepRefSurface"
+	swTnTrimRefSurface "TrimRefSurface"
+	swTnUnTrimRefSurf "UnTrimRefSurf"
+	swTnVolSweepRefSurface "VolSweepRefSurface"
+	
+Weldment Features
+=================
+
+	swTnGusset "Gusset"
+	swTnWeldMemberFeat "WeldMemberFeat"
+	swTnWeldmentFeature "WeldmentFeature"
+	swTnWeldmentTableAnchor "WeldmentTableAnchor"
+	swTnWeldmentTableFeature "WeldmentTableFeat"

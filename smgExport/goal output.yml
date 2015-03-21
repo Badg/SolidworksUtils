@@ -1,0 +1,381 @@
+--- !examplePart
+# Source-Mutable Geometry (.smg) files are formatted as a subset of YAML.
+## Note: byref vs byval should determine tolerancing, or something similar.  "equal" being lazy, or "equal" meaning toleranced as such.  Equal vs equivalent?
+include:
+asset global:
+  - A1B2C3: &A1B2C3
+      type: RefPlane
+      swname: renameFront
+  - A1B2C3: &A1B2C3
+      type: RefPlane
+      swname: Top
+  - A1B2C3: &A1B2C3
+      type: RefPlane
+      swname: Right
+  - A1B2C3: &A1B2C3
+      type: OriginProfileFeature
+      swname: renameOrigin
+asset local:
+    - node: &id####
+        ## That reference is actually useful, because it allows you to specify when to implement the include.  Readback -> put them in a folder with a specific name?
+        ## Should it be Boss-Extrude1: &Boss-Extrude1 and then type: extrusion?  or feature: & and then type: and name: ?
+          ## Names (or would ID be better?) should be unique (could create separate solidworksname for back-compatibility)
+          ## Vertical, horizontal, etc would probably be better defined in terms of reference geometry?
+           ## What about putting the sketch before the extrusion?  That's the order they're usually created in!
+           ##  How to deal with sketch1-> sketch2 -> feature1 -> feature2 and other atypical rollback orders?
+        type: sketch
+        name: rename Sketch1
+        parent: renameFront
+        entities: 
+            - name: arc1@rename Sketch1
+              type: arc
+              id: 0-1
+              parent: rename Sketch1
+              center: point7@rename Sketch1
+              start: point4@rename Sketch1
+              end: point3@rename Sketch1
+            - name: arc2@rename Sketch1
+              type: arc
+              id: 1-2
+              parent: rename Sketch1
+              center: point8@rename Sketch1
+              start: point2@rename Sketch1
+              end: point5@rename Sketch1
+            - name: arc3@rename Sketch1
+              type: arc
+              id: 2-3
+              parent: rename Sketch1
+              center: point9@rename Sketch1
+              start: point2@rename Sketch1
+              end: point4@rename Sketch1
+            - name: arc4@rename Sketch1
+              type: arc
+              id: 3-4
+              parent: rename Sketch1
+              center: point10@rename Sketch1
+              start: point5@rename Sketch1
+              end: point3@rename Sketch1
+            - name: line1@rename Sketch1
+              type: line
+              id: 1-1
+              parent: rename Sketch1
+              start: point3@rename Sketch1
+              end: point5@rename Sketch1
+            - name: line2@rename Sketch1
+              type: line
+              id: 2-2
+              parent: rename Sketch1
+              start: point3@rename Sketch1
+              end: point4@rename Sketch1
+            - name: line3@rename Sketch1
+              type: line
+              id: 3-3
+              parent: rename Sketch1
+              start: point4@rename Sketch1
+              end: point2@rename Sketch1
+            - name: line4@rename Sketch1
+              type: line
+              id: 4-4
+              parent: rename Sketch1
+              start: point5@rename Sketch1
+              end: point2@rename Sketch1
+            - name: line5@rename Sketch1
+              type: line
+              id: 5-5
+              parent: rename Sketch1
+              start: point3@rename Sketch1
+              end: point2@rename Sketch1
+            - name: line6@rename Sketch1
+              type: line
+              id: 6-6
+              parent: rename Sketch1
+              start: point4@rename Sketch1
+              end: point5@rename Sketch1
+            - name: point1@rename Sketch1
+              type: point
+              id: 0-1
+              parent: rename Sketch1
+              coordinates: [ 0,  0,  0]
+            - name: point2@rename Sketch1
+              type: point
+              id: 1-2
+              parent: rename Sketch1
+              coordinates: [ .0508,  .0508,  0]
+            - name: point3@rename Sketch1
+              type: point
+              id: 2-3
+              parent: rename Sketch1
+              coordinates: [-.0508, -.0508,  0]
+            - name: point4@rename Sketch1
+              type: point
+              id: 3-4
+              parent: rename Sketch1
+              coordinates: [-.0508,  .0508,  0]
+            - name: point5@rename Sketch1
+              type: point
+              id: 4-5
+              parent: rename Sketch1
+              coordinates: [ .0508, -.0508,  0]
+            - name: point7@rename Sketch1
+              type: point
+              id: 6-7
+              parent: rename Sketch1
+              coordinates: [-.1016,  0,  0]
+            - name: point8@rename Sketch1
+              type: point
+              id: 7-8
+              parent: rename Sketch1
+              coordinates: [ .1016,  0,  0]
+            - name: point9@rename Sketch1
+              type: point
+              id: 8-9
+              parent: rename Sketch1
+              coordinates: [-1.38777878078145E-17,  .1016,  0]
+            - name: point10@rename Sketch1
+              type: point
+              id: 9-10
+              parent: rename Sketch1
+              coordinates: [-1.38777878078145E-17, -.1016,  0]
+        relations: 
+            - name: unnamed relation
+              type: coincident
+              source: point1@rename Sketch1
+              destination: line5@rename Sketch1
+            - name: unnamed relation
+              type: coincident
+              source: point1@rename Sketch1
+              destination: line6@rename Sketch1
+            - name: unnamed relation
+              type: coincident
+              source: point1@renameOrigin
+              destination: point1@rename Sketch1
+            - name: unnamed relation
+              type: equal length
+              source: line2@rename Sketch1
+              destination: line3@rename Sketch1
+            - name: unnamed relation
+              type: tangent
+              source: arc1@rename Sketch1
+              destination: line6@rename Sketch1
+            - name: unnamed relation
+              type: tangent
+              source: arc1@rename Sketch1
+              destination: line5@rename Sketch1
+            - name: unnamed relation
+              type: tangent
+              source: arc2@rename Sketch1
+              destination: line5@rename Sketch1
+            - name: unnamed relation
+              type: tangent
+              source: line5@rename Sketch1
+              destination: arc3@rename Sketch1
+            - name: unnamed relation
+              type: tangent
+              source: line6@rename Sketch1
+              destination: arc4@rename Sketch1
+            - name: unnamed relation
+              type: vertical
+              source: global
+              destination: line2@rename Sketch1
+            - name: unnamed relation
+              type: horizontal
+              source: global
+              destination: line1@rename Sketch1
+            - name: unnamed relation
+              type: vertical
+              source: global
+              destination: line4@rename Sketch1
+            - name: unnamed relation
+              type: horizontal
+              source: global
+              destination: line3@rename Sketch1
+            - name: unnamed relation
+              type: distance
+              source: line4@rename Sketch1
+              destination: line2@rename Sketch1
+        dimensions: 
+            - name: D1
+              type: linear
+              parent: rename Sketch1
+              value: 4
+              state: driving
+              attachments: 
+                - line4@rename Sketch1
+                - line2@rename Sketch1
+# This is the end of the reformatted part     
+    - type: Extrusion
+      name: rename Boss-Extrude1
+      dimensions: 
+          - id: A1b2C3d7
+            asset name: base plate depth
+            swname: D1
+            type: linear
+            parent: rename Boss-Extrude1
+            value: 0.25
+            state: driving
+            attachments: none
+      resulting faces: 
+          - name: anonymous face
+            type: face
+            normal vector: [ 0,  0, -1]
+          - name: anonymous face
+            type: face
+            normal vector: [-0, -0,  1]
+          - name: anonymous face
+            type: face
+            normal vector: [-0, -1, -0]
+          - name: anonymous face
+            type: face
+            normal vector: [-1, -0, -0]
+          - name: anonymous face
+            type: face
+            normal vector: [-0,  1, -0]
+          - name: anonymous face
+            type: face
+            normal vector: [ 1, -0, -0]
+      sketch: &rename Sketch1
+            name: rename Sketch1
+            type: ProfileFeature       
+    ICE: &Cut-Extrude1
+        name: Cut-Extrude1
+        resulting faces: 
+          - name: anonymous face
+            type: face
+            normal vector: [ 0,  0,  0]
+          - name: anonymous face
+            type: face
+            normal vector: [ 0,  0,  0]
+        sketch: &Sketch1
+            name: Sketch1
+            type: ProfileFeature
+            parent: anonymous face
+            entities: 
+              - name: arc1@Sketch1
+                type: circle
+                id: 0-1
+                parent: Sketch1
+                center: point2@Sketch1
+              - name: arc2@Sketch1
+                type: circle
+                id: 1-2
+                parent: Sketch1
+                center: point11@Sketch1
+              - name: line1@Sketch1
+                type: line
+                id: 0-1
+                parent: Sketch1
+                start: point4@Sketch1
+                end: point5@Sketch1
+              - name: line3@Sketch1
+                type: line
+                id: 1-3
+                parent: Sketch1
+                start: point8@Sketch1
+                end: point9@Sketch1
+              - name: point2@Sketch1
+                type: point
+                id: 0-2
+                parent: Sketch1
+                coordinates: [ 0,  0,  0]
+              - name: point4@Sketch1
+                type: point
+                id: 3-4
+                parent: Sketch1
+                coordinates: [-.00635,  0,  0]
+              - name: point5@Sketch1
+                type: point
+                id: 4-5
+                parent: Sketch1
+                coordinates: [ .00635,  0,  0]
+              - name: point8@Sketch1
+                type: point
+                id: 5-8
+                parent: Sketch1
+                coordinates: [ 0,  .00635,  0]
+              - name: point9@Sketch1
+                type: point
+                id: 6-9
+                parent: Sketch1
+                coordinates: [ 0, -.00635,  0]
+              - name: point11@Sketch1
+                type: point
+                id: 7-11
+                parent: Sketch1
+                coordinates: [ .0254,  1.94412679364642E-18,  0]
+            relations: 
+              - name: unnamed relation
+                type: coincident
+                source: point1@renameOrigin
+                destination: point2@Sketch1
+              - name: unnamed relation
+                type: coincident
+                source: point4@Sketch1
+                destination: arc1@Sketch1
+              - name: unnamed relation
+                type: horizontal from point
+                source: point4@Sketch1
+                destination: point2@Sketch1
+              - name: unnamed relation
+                type: coincident
+                source: point5@Sketch1
+                destination: arc1@Sketch1
+              - name: unnamed relation
+                type: horizontal from point
+                source: point5@Sketch1
+                destination: point2@Sketch1
+              - name: unnamed relation
+                type: coincident
+                source: line1@Sketch1
+                destination: point2@Sketch1
+              - name: unnamed relation
+                type: coincident
+                source: point8@Sketch1
+                destination: arc1@Sketch1
+              - name: unnamed relation
+                type: vertical from point
+                source: point8@Sketch1
+                destination: point2@Sketch1
+              - name: unnamed relation
+                type: coincident
+                source: point9@Sketch1
+                destination: arc1@Sketch1
+              - name: unnamed relation
+                type: vertical from point
+                source: point9@Sketch1
+                destination: point2@Sketch1
+              - name: unnamed relation
+                type: coincident
+                source: line3@Sketch1
+                destination: point2@Sketch1
+              - name: unnamed relation
+                type: coincident
+                source: point11@Sketch1
+                destination: line1@Sketch1
+              - name: unnamed relation
+                type: equal length
+                source: arc1@Sketch1
+                destination: arc2@Sketch1
+              - name: unnamed relation
+                type: distance
+                source: point11@Sketch1
+                destination: line3@Sketch1
+              - name: unnamed relation
+                type: diameter
+                source: global
+                destination: arc1@Sketch1
+            dimensions: 
+              - name: D1
+                type: diameter
+                parent: Sketch1
+                value: 0.5
+                state: driving
+                attachments: 
+                  - arc1@Sketch1
+              - name: D2
+                type: linear
+                parent: Sketch1
+                value: 1
+                state: driving
+                attachments: 
+                  - point11@Sketch1
+                  - line3@Sketch1
